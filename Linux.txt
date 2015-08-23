@@ -1,0 +1,39 @@
+sudo apt-get update
+sudo apt-get upgrade
+
+sudo ln -s /opt/sublime_text/sublime_text /usr/local/bin/subl
+
+sudo apt-get install git
+git config --global user.email "kevingutierrezg@gmail.com"
+git config --global user.name "Kevin Gutiérrez"
+git config --global push.default simple
+
+ssh-keygen
+cat ~/.ssh/id_rsa.pub
+ssh -T git@bitbucket.org
+
+curl -sL https://deb.nodesource.com/setup_0.12 | sudo -E bash -
+sudo apt-get install -y nodejs
+sudo npm install --global gulp
+npm install -g bower
+
+
+gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
+\curl -sSL https://get.rvm.io | bash -s stable --rails
+source ~/.rvm/scripts/rvm
+
+sudo apt-get install apache2 php5 libapache2-mod-php5 mysql-server
+sudo chmod 777 /var/www 
+sudo a2enmod php5
+sudo a2enmod rewrite
+sudo /etc/init.d/apache2 restart
+sudo apt-get install libapache2-mod-auth-mysql php5-mysql
+sudo apt-get install php5-mcrypt
+
+curl -sS https://getcomposer.org/installer | php  ->  php -r "readfile('https://getcomposer.org/installer');" | php
+sudo mv composer.phar /usr/local/bin/composer
+sudo chmod +x /usr/local/bin/composer
+
+vagrant box add laravel/homestead
+ssh-keygen -t rsa -C "you@homestead"
+composer global require laravel/homestead --dev
