@@ -37,6 +37,7 @@ sudo mv composer.phar /usr/local/bin/composer
 sudo chmod +x /usr/local/bin/composer
 
 composer global require "laravel/installer=~1.1"
+export PATH="$PATH:~/.composer/vendor/bin"
 vagrant box add laravel/homestead
 ssh-keygen -t rsa -C "you@homestead"
 composer global require laravel/homestead --dev
