@@ -1,6 +1,8 @@
 sudo apt-get update
 sudo apt-get upgrade
 
+sudo apt-get install ppa-purge
+
 sudo ln -s /opt/sublime_text/sublime_text /usr/local/bin/subl
 
 sudo apt-get install git
