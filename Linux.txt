@@ -30,7 +30,7 @@ sudo /etc/init.d/apache2 restart
 sudo apt-get install libapache2-mod-auth-mysql php5-mysql
 sudo apt-get install php5-mcrypt
 
-curl -sS https://getcomposer.org/installer | php  ->  php -r "readfile('https://getcomposer.org/installer');" | php
+curl -sS https://getcomposer.org/installer | php
 sudo mv composer.phar /usr/local/bin/composer
 sudo chmod +x /usr/local/bin/composer
 
