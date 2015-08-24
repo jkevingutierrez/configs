@@ -34,6 +34,7 @@ curl -sS https://getcomposer.org/installer | php
 sudo mv composer.phar /usr/local/bin/composer
 sudo chmod +x /usr/local/bin/composer
 
+composer global require "laravel/installer=~1.1"
 vagrant box add laravel/homestead
 ssh-keygen -t rsa -C "you@homestead"
 composer global require laravel/homestead --dev
