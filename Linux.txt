@@ -1,29 +1,69 @@
+#System Update
+sudo apt-get update && sudo apt-get upgrade && sudo apt-get dist-upgrade
+
+#Install Tweaks
+sudo add-apt-repository ppa:mpstark/elementary-tweaks-daily
 sudo apt-get update
-sudo apt-get upgrade
+sudo apt-get install elementary-tweaks
 
-sudo apt-get install ppa-purge
+#Clean-up System
+sudo apt-get purge midori-granite
+sudo apt-get purge scratch-text-editor
+sudo apt-get purge geary
+sudo apt-get autoremove
+sudo apt-get autoclean
 
-sudo ln -s /opt/sublime_text/sublime_text /usr/local/bin/subl
+#Install pidgin
+sudo apt-get install pidgin
 
+#Install VLC
+sudo apt-get install vlc
+
+#Install Guake Terminal
+sudo apt-get install guake
+
+#Install thunderbird
+sudo add-apt-repository ppa:ubuntu-mozilla-security/ppa
+sudo apt-get update
+sudo apt-get install thunderbird
+
+#instal gimp
+sudo apt-get install gimp
+
+#Install libreoffice
+sudo add-apt-repository ppa:libreoffice/ppa
+sudo apt-get update
+sudo apt-get install libreoffice 
+
+#Install gedit (Text Editor)
+sudo apt-get install gedit
+
+#Install File Compression Libs
+sudo apt-get install unace unrar zip unzip xz-utils p7zip-full p7zip-rar sharutils rar uudeview mpack arj cabextract file-roller
+
+#Install the latest git Version
+sudo add-apt-repository ppa:git-core/ppa
+sudo apt-get update
 sudo apt-get install git
+
+#Config git
 git config --global user.email "kevingutierrezg@gmail.com"
 git config --global user.name "Kevin Gutiérrez"
 git config --global push.default simple
 
-ssh-keygen
-cat ~/.ssh/id_rsa.pub
-ssh -T git@bitbucket.org
-
+#Instal node and npm package
 curl -sL https://deb.nodesource.com/setup_0.12 | sudo -E bash -
 sudo apt-get install -y nodejs
-sudo npm install --global gulp
-npm install -g bower
+sudo npm install -g npm@3.0-latest
+sudo npm install -g gulp
+sudo npm install -g bower
 
-
+#Install ruby and ruby on rails
 gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
 \curl -sSL https://get.rvm.io | bash -s stable --rails
 source ~/.rvm/scripts/rvm
 
+#Install Apache php mysql
 sudo apt-get install apache2 php5 libapache2-mod-php5 mysql-server
 sudo chmod 777 /var/www 
 sudo a2enmod php5
@@ -32,12 +72,22 @@ sudo /etc/init.d/apache2 restart
 sudo apt-get install libapache2-mod-auth-mysql php5-mysql
 sudo apt-get install php5-mcrypt
 
+#Install composer
 curl -sS https://getcomposer.org/installer | php
 sudo mv composer.phar /usr/local/bin/composer
 sudo chmod +x /usr/local/bin/composer
-
-composer global require "laravel/installer=~1.1"
 export PATH="$PATH:~/.composer/vendor/bin"
+
+#install laravel
+composer global require "laravel/installer=~1.1"
 vagrant box add laravel/homestead
 ssh-keygen -t rsa -C "you@homestead"
 composer global require laravel/homestead --dev
+
+#Configure bitbucket
+ssh-keygen
+cat ~/.ssh/id_rsa.pub
+ssh -T git@bitbucket.org
+
+#Sublime terminal 
+sudo ln -s /opt/sublime_text/sublime_text /usr/local/bin/subl
