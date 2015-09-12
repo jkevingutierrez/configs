@@ -60,6 +60,7 @@ sudo apt-get install -y nodejs
 sudo npm install -g npm@3.0-latest
 sudo npm install -g gulp
 sudo npm install -g bower
+sudo npm install -g npm-check
 
 #Install ruby and ruby on rails
 gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
