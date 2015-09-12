@@ -19,8 +19,8 @@ sudo apt-get install pidgin
 #Install VLC
 sudo apt-get install vlc
 
-#Install Guake Terminal
-sudo apt-get install guake
+#Install Terminator Terminal
+sudo apt-get install terminator
 
 #Install thunderbird
 sudo add-apt-repository ppa:ubuntu-mozilla-security/ppa
@@ -95,3 +95,8 @@ ssh -T git@bitbucket.org
 
 #Sublime terminal 
 sudo ln -s /opt/sublime_text/sublime_text /usr/local/bin/subl
+
+#Instal oh my zsh
+sudo apt-get install zsh
+curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
+chsh -s /bin/zsh
