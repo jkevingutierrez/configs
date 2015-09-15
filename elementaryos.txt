@@ -86,6 +86,7 @@ sudo /etc/init.d/apache2 restart
 sudo apt-get install libapache2-mod-auth-mysql php5-mysql
 sudo apt-get install mcrypt php5-mcrypt
 sudo php5enmod mcrypt
+sudo chmod -R 755 /var/www
 
 #Install composer
 curl -sS https://getcomposer.org/installer | php
