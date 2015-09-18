@@ -114,4 +114,5 @@ curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | 
 chsh -s /bin/zsh
 
 #Remote desktop connection
+sudo apt-add-repository ppa:remmina-ppa-team/remmina-next ; sudo apt-get update ; sudo apt-get install remmina remmina-plugin-rdp
 sudo apt-get install cmake intltool   libgtk-3-dev libssh-dev libavahi-ui-gtk3-dev libvte-2.90-dev libxkbfile-dev
