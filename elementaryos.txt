@@ -112,3 +112,6 @@ sudo ln -s /opt/sublime_text/sublime_text /usr/local/bin/subl
 sudo apt-get install zsh
 curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
 chsh -s /bin/zsh
+
+#Remote desktop connection
+sudo apt-get install cmake intltool   libgtk-3-dev libssh-dev libavahi-ui-gtk3-dev libvte-2.90-dev libxkbfile-dev
