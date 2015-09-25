@@ -2,10 +2,10 @@
 sudo apt-get update && sudo apt-get upgrade && sudo apt-get dist-upgrade
 
 #Config display
-sudo cvt 1920 1080 60
-sudo xrandr --newmode "1920x1080_60.00" 173.00 1920 2048 2248 2576 1080 1083 1088 1120 -hsync +vsync
+sudo cvt 1440 900 60
+sudo xrandr --newmode "1440x900_60.00"  106.50  1440 1528 1672 1904  900 903 909 934 -hsync +vsync
 sudo xrandr -q
-sudo xrandr --addmode Virtual1 1920x1080_60.00
+sudo xrandr --addmode VGA1 1440x900_60.00
 
 #Install Tweaks
 sudo add-apt-repository ppa:mpstark/elementary-tweaks-daily
