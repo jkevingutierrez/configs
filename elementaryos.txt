@@ -128,3 +128,14 @@ python -m pip install Django
 
 #Java firefox plugin
 sudo apt-get install icedtea-plugin
+
+#Configure java
+sudo apt-get install default-jre
+sudo apt-get install default-jdk
+sudo apt-get install python-software-properties
+sudo add-apt-repository ppa:webupd8team/java
+sudo apt-get update
+sudo apt-get install oracle-java8-installer
+sudo gedit /etc/environment  
+sudo update-alternatives --config java
+sudo update-alternatives --config javac
