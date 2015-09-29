@@ -139,3 +139,4 @@ sudo apt-get install oracle-java8-installer
 sudo gedit /etc/environment  
 sudo update-alternatives --config java
 sudo update-alternatives --config javac
+sudo gedit ~/.profile
