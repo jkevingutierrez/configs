@@ -125,3 +125,6 @@ $ sudo apt-get install libreadline-gplv2-dev libncursesw5-dev libssl-dev libsqli
 make install
 python get-pip.py --user
 python -m pip install Django
+
+#Java firefox plugin
+sudo apt-get install icedtea-plugin
