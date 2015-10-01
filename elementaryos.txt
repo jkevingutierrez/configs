@@ -66,7 +66,6 @@ git config --global core.whitespace cr-at-eol
 curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -
 sudo apt-get install -y nodejs
 sudo apt-get install build-essential
-sudo npm install -g npm@3.0-latest
 sudo npm install -g gulp
 sudo npm install -g grunt
 sudo npm install -g grunt-cli
@@ -87,7 +86,6 @@ sudo /etc/init.d/apache2 restart
 sudo apt-get install libapache2-mod-auth-mysql php5-mysql
 sudo apt-get install mcrypt php5-mcrypt
 sudo php5enmod mcrypt
-sudo chmod -R 755 /var/www
 
 #Install composer
 curl -sS https://getcomposer.org/installer | php
