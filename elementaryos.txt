@@ -139,3 +139,7 @@ sudo gedit /etc/environment
 sudo update-alternatives --config java
 sudo update-alternatives --config javac
 sudo gedit ~/.profile
+
+
+sudo apt-get install aspell-es
+sudo apt-get install myspell-es
