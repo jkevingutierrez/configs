@@ -27,6 +27,7 @@ sudo apt-get install vlc
 
 #Install Terminator Terminal
 sudo apt-get install terminator
+sudo apt-get install tmux
 
 #Install thunderbird
 sudo add-apt-repository ppa:ubuntu-mozilla-security/ppa
