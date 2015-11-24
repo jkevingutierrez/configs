@@ -7,12 +7,15 @@ sudo xrandr --newmode "1440x900_60.00"  106.50  1440 1528 1672 1904  900 903 909
 sudo xrandr -q
 sudo xrandr --addmode VGA1 1440x900_60.00
 
-#Install Tweaks
+#Install Tweaks & dconf-tools
 sudo add-apt-repository ppa:mpstark/elementary-tweaks-daily
 sudo add-apt-repository ppa:elementary-os/dailysudo
 sudo apt-get update
 sudo apt-get install elementary-tweaks
 sudo apt-get install dconf-tools
+
+#Install ppa-purge
+sudo apt-get install ppa-purge
 
 #Clean-up System
 sudo apt-get purge midori-granite
