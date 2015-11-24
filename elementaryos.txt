@@ -9,7 +9,6 @@ sudo xrandr --addmode VGA1 1440x900_60.00
 
 #Install Tweaks & dconf-tools
 sudo add-apt-repository ppa:mpstark/elementary-tweaks-daily
-sudo add-apt-repository ppa:elementary-os/dailysudo
 sudo apt-get update
 sudo apt-get install elementary-tweaks
 sudo apt-get install dconf-tools
