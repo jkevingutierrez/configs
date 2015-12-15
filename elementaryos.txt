@@ -158,6 +158,10 @@ sudo gedit ~/.profile
 sudo apt-get install aspell-es
 sudo apt-get install myspell-es
 
+#Wine
+sudo add-apt-repository ppa:ubuntu-wine/ppa
+sudo apt-get update
+sudo apt-get install wine1.7 winetricks
 
 sudo apt-get install mesa-utils
 sudo mkdir /etc/X11/xorg.conf.d/
