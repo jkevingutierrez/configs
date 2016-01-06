@@ -99,6 +99,8 @@ sudo apt-get install mcrypt php5-mcrypt
 sudo apt-get install php5-curl
 sudo php5enmod mcrypt
 sudo apt-get install php5-sybase php5-odbc
+sudo apt-get install phpmyadmin
+sudo apt-get install apache2-utils
 sudo /etc/init.d/apache2 restart
 
 
