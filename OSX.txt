@@ -27,3 +27,6 @@ brew services
 # fonts
 brew tap caskroom/fonts
 brew cask install font-hack
+
+# ssh
+ssh-keygen 
