@@ -19,7 +19,7 @@ sh ~/.vim_runtime/install_awesome_vimrc.sh
 brew cask install java
 
 # brew programms
-brew install git node python gradle scala sbt postgres mongodb
+brew install git node python gradle scala sbt postgres mongodb ruby
 
 # brew services
 brew services
