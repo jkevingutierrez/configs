@@ -19,7 +19,7 @@ sh ~/.vim_runtime/install_awesome_vimrc.sh
 brew cask install java
 
 # brew programms
-brew install git node python gradle scala sbt postgres mongodb ruby
+brew install git node python gradle scala sbt postgres mongodb ruby vim
 
 # brew services
 brew services
@@ -30,3 +30,19 @@ brew cask install font-hack
 
 # ssh
 ssh-keygen 
+
+# git
+git config --global user.email "kevingutierrezg@gmail.com"
+git config --global user.name "Kevin Gutiérrez"
+git config --global core.editor /usr/bin/vim
+git config --global push.default simple
+git config --global core.autocrlf input
+git config --global core.whitespace cr-at-eol
+
+# Code folders
+mkdir ~/code
+mkdir ~/code/zooloop
+
+# DEVELOP branch
+git fetch --all
+git checkout develop
