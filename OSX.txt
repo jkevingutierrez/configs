@@ -43,6 +43,10 @@ git config --global core.whitespace cr-at-eol
 mkdir ~/code
 mkdir ~/code/zooloop
 
+# postgresql
+createdb
+psql
+
 # DEVELOP branch
 git fetch --all
 git checkout develop
