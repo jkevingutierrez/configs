@@ -47,6 +47,9 @@ mkdir ~/code/zooloop
 createdb
 psql
 
+# Ruby
+echo "gem: --no-rdoc --no-ri" > ~/.gemrc
+
 # DEVELOP branch
 git fetch --all
 git checkout develop
