@@ -89,16 +89,16 @@ gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB8
 source ~/.rvm/scripts/rvm
 
 #Install Apache php mysql
-sudo apt-get install apache2 php5 libapache2-mod-php5 mysql-server
+sudo apt-get install apache2 php7 libapache2-mod-php7 mysql-server
 sudo chmod 777 /var/www 
-sudo a2enmod php5
+sudo a2enmod php7
 sudo a2enmod rewrite
 sudo /etc/init.d/apache2 restart
-sudo apt-get install libapache2-mod-auth-mysql php5-mysql
-sudo apt-get install mcrypt php5-mcrypt
+sudo apt-get install libapache2-mod-auth-mysql php7-mysql
+sudo apt-get install mcrypt php7-mcrypt
 sudo apt-get install php5-curl
-sudo php5enmod mcrypt
-sudo apt-get install php5-sybase php5-odbc
+sudo php7enmod mcrypt
+sudo apt-get install php7-sybase php7-odbc
 sudo apt-get install phpmyadmin
 sudo apt-get install apache2-utils
 sudo /etc/init.d/apache2 restart
