@@ -96,7 +96,7 @@ sudo a2enmod rewrite
 sudo /etc/init.d/apache2 restart
 sudo apt-get install libapache2-mod-auth-mysql php7-mysql
 sudo apt-get install mcrypt php7-mcrypt
-sudo apt-get install php5-curl
+sudo apt-get install php7-curl
 sudo php7enmod mcrypt
 sudo apt-get install php7-sybase php7-odbc
 sudo apt-get install phpmyadmin
@@ -173,3 +173,7 @@ sudo apt-get install mesa-utils
 sudo mkdir /etc/X11/xorg.conf.d/
 echo -e 'Section "Device"\n Identifier "Intel Graphics"\n Driver "Intel"\n Option "AccelMethod" "sna"\n Option "TearFree" "true"\nEndSection' | sudo tee /etc/X11/xorg.conf.d/20-intel.conf
 sudo reboot
+
+
+http://www.jenv.be/
+https://github.com/pyenv/pyenv
