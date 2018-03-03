@@ -174,6 +174,11 @@ sudo mkdir /etc/X11/xorg.conf.d/
 echo -e 'Section "Device"\n Identifier "Intel Graphics"\n Driver "Intel"\n Option "AccelMethod" "sna"\n Option "TearFree" "true"\nEndSection' | sudo tee /etc/X11/xorg.conf.d/20-intel.conf
 sudo reboot
 
+#Docker
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu    xenial    stable"
+https://docs.docker.com/install/linux/docker-ce/ubuntu/#set-up-the-repository
+https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-16-04
+
 
 http://www.jenv.be/
 https://github.com/pyenv/pyenv
