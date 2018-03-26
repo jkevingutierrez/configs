@@ -69,9 +69,7 @@ sudo apt-get install git
 #Config git
 git config --global user.email "kevingutierrezg@gmail.com"
 git config --global user.name "Kevin Gutiérrez"
-git config --global push.default simple
-git config --global core.autocrlf input
-git config --global core.whitespace cr-at-eol
+git config --global core.editor "vim"
 
 #Instal node and npm package
 curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
