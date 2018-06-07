@@ -28,6 +28,11 @@ brew services
 brew tap caskroom/fonts
 brew cask install font-hack
 
+# Java 8
+brew tap caskroom/versions
+brew cask install java8
+
+
 # ssh
 ssh-keygen 
 
