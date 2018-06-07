@@ -39,6 +39,10 @@ git config --global push.default simple
 git config --global core.autocrlf input
 git config --global core.whitespace cr-at-eol
 
+# git mergetool
+sudo xcode-select -s /Applications/Xcode.app/Contents/Developer
+git config --global merge.tool opendiff
+
 # Code folders
 mkdir ~/code
 mkdir ~/code/zooloop
