@@ -64,3 +64,7 @@ echo "gem: --no-rdoc --no-ri" > ~/.gemrc
 # DEVELOP branch
 git fetch --all
 git checkout develop
+
+# Soundflower
+https://github.com/mattingalls/Soundflower/releases/tag/2.0b2
+https://apple.stackexchange.com/questions/212829/how-to-record-both-screen-and-sound-with-quicktime-on-el-capitan
