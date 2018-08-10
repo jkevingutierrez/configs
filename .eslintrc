@@ -1,0 +1,22 @@
+{
+  // "extends": "airbnb",
+  "rules": {
+    "func-names": ["error", "never"],
+    // "indent": ["error", 4],
+    // "comma-dangle": ["error", "never"],
+    // "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    // "react/jsx-indent" : ["error", 4],
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true,
+  },
+  "parserOptions": {
+    "ecmaVersion": 8,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    },
+ }
+}
