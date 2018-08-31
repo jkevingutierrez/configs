@@ -22,19 +22,31 @@ inoremap jk <esc>
 map <C-n> :NERDTreeToggle<CR>
 let g:NERDTreeWinPos = "left"
 
+let g:gitgutter_enabled = 1
+
+" Enable folding
+set foldmethod=indent
+set foldlevel=99
+
 set background=dark
 colorscheme solarized
 
-au BufNewFile,BufRead *.py
-    \ set tabstop=4
-    \ set softtabstop=4
-    \ set shiftwidth=4
-    \ set textwidth=79
-    \ set expandtab
-    \ set autoindent
+autocmd BufWritePre * :%s/\s\+$//e
+
+au BufNewFile,BufRead *.py,*.php,*.rb,*.html,*.js,*.md
+    \ set tabstop=4 |
+    \ set softtabstop=4 |
+    \ set shiftwidth=4 |
+    \ set textwidth=79 |
+    \ set expandtab |
+    \ set autoindent |
     \ set fileformat=unix
 
-au BufNewFile,BufRead *.js, *.html, *.css
-    \ set tabstop=2
-    \ set softtabstop=2
-    \ set shiftwidth=2
+au BufNewFile,BufRead *.ts,*.html,*.css,*.scss
+    \ set tabstop=2 |
+    \ set softtabstop=2 |
+    \ set shiftwidth=2 |
+    \ set textwidth=79 |
+    \ set expandtab |
+    \ set autoindent |
+    \ set fileformat=unix
