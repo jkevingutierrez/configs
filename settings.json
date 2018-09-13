@@ -1,0 +1,33 @@
+{
+    "files.trimTrailingWhitespace": true,
+    "editor.wrappingIndent": "indent",
+    "editor.trimAutoWhitespace": true,
+    "workbench.iconTheme": "vscode-icons",
+    "html.format.endWithNewline": true,
+    "vsicons.projectDetection.autoReload": true,
+    "sublimeTextKeymap.promptV3Features": true,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.snippetSuggestions": "top",
+    "editor.formatOnPaste": true,
+    "editor.wordWrap": "on",
+    "gitlens.advanced.messages": {
+        "suppressShowKeyBindingsNotice": true,
+        "suppressWelcomeNotice": true
+    },
+    "gitlens.keymap": "alternate",
+    "workbench.colorTheme": "Slime",
+    "explorer.openEditors.visible": 1,
+    "editor.minimap.enabled": false,
+    "editor.tabCompletion": true,
+    "editor.lineHeight": 24,
+    "files.encoding": "utf8",
+    "files.insertFinalNewline": true,
+    "editor.fontSize": 15,
+    "window.zoomLevel": 0,
+    "vim.insertModeKeyBindings": [{
+        "before": ["j", "j"],
+        "after": ["<Esc>"]
+    }
+],
+"python.pythonPath": "/usr/local/bin/python",
+  }
