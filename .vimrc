@@ -15,6 +15,7 @@ set nu
 set clipboard=unnamed
 set encoding=utf-8
 
+
 " Make `jj` and `jk` throw you into normal mode
 inoremap jj <esc>
 inoremap jk <esc>
@@ -35,9 +36,10 @@ set background=dark
 colorscheme solarized
 syntax enable
 
-:set relativenumber
-:set cursorline
-
+set relativenumber
+set cursorline
+set mouse=nicr
+set paste
 
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
