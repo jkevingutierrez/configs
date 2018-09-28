@@ -15,7 +15,6 @@ set nu
 set clipboard=unnamed
 set encoding=utf-8
 
-
 " Make `jj` and `jk` throw you into normal mode
 inoremap jj <esc>
 inoremap jk <esc>
@@ -29,8 +28,6 @@ let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 
 " Enable folding
-set foldmethod=indent
-set foldlevel=99
 
 set background=dark
 colorscheme solarized
@@ -38,15 +35,15 @@ syntax enable
 
 set relativenumber
 set cursorline
-set mouse=nicr
-set paste
+
+set mouse=a
 
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
 let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
+let g:syntastic_auto_loc_list = 0
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
@@ -69,7 +66,13 @@ noremap <Down> <NOP>
 noremap <Left> <NOP>
 noremap <Right> <NOP>
 
-au BufNewFile,BufRead *.py,*.php,*.rb,*.html,*.js,*.md
+set foldmethod=indent
+set foldlevel=99
+set nofoldenable
+
+set completeopt-=preview
+
+au BufNewFile,BufRead *.py,*.php,*.rb,*.html,*.js,*.json,*.md
     \ set tabstop=4 |
     \ set softtabstop=4 |
     \ set shiftwidth=4 |
@@ -86,4 +89,3 @@ au BufNewFile,BufRead *.ts,*.html,*.css,*.scss
     \ set expandtab |
     \ set autoindent |
     \ set fileformat=unix
-
