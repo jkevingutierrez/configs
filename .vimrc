@@ -15,6 +15,8 @@ set nu
 set clipboard=unnamed
 set encoding=utf-8
 
+let mapleader = "\<Space>"
+
 " Make `jj` and `jk` throw you into normal mode
 inoremap jj <esc>
 inoremap jk <esc>
@@ -31,12 +33,12 @@ let g:ctrlp_cmd = 'CtrlP'
 
 set background=dark
 colorscheme solarized
-syntax enable
+syntax on
 
 set relativenumber
 set cursorline
-
-set mouse=a
+set mouse=nicr
+set paste
 
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
@@ -46,6 +48,7 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 0
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+let g:syntastic_javascript_checkers = ['eslint']
 
 
 autocmd BufWritePre * :%s/\s\+$//e
@@ -66,11 +69,17 @@ noremap <Down> <NOP>
 noremap <Left> <NOP>
 noremap <Right> <NOP>
 
-set foldmethod=indent
-set foldlevel=99
-set nofoldenable
+let g:multi_cursor_use_default_mapping=0
 
-set completeopt-=preview
+" Default mapping
+let g:multi_cursor_start_word_key      = '<C-d>'
+let g:multi_cursor_select_all_word_key = '<C-D>'
+let g:multi_cursor_start_key           = 'g<C-d>'
+let g:multi_cursor_select_all_key      = 'g<A-n>'
+let g:multi_cursor_next_key            = '<C-d>'
+let g:multi_cursor_prev_key            = '<C-g>'
+let g:multi_cursor_skip_key            = '<C-x>'
+let g:multi_cursor_quit_key            = '<Esc>'
 
 au BufNewFile,BufRead *.py,*.php,*.rb,*.html,*.js,*.json,*.md
     \ set tabstop=4 |
