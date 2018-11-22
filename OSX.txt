@@ -72,3 +72,6 @@ git checkout develop
 # Soundflower
 https://github.com/mattingalls/Soundflower/releases/tag/2.0b2
 https://apple.stackexchange.com/questions/212829/how-to-record-both-screen-and-sound-with-quicktime-on-el-capitan
+
+#phpenv
+brew install gcc re2c libmcrypt autoconf automake libiconv bison openssl libxml2 jpeg libpng
