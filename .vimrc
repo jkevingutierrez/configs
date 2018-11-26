@@ -10,12 +10,28 @@ source ~/.vim_runtime/my_configs.vim
 catch
 endtry
 
+filetype plugin indent on
 
-set nu
+" Show line numbers
+set number
+
+" use » to mark Tabs and ° to mark trailing whitespace. This is a
+" non-obtrusive way to mark these special characters.
+set list listchars=tab:»\ ,trail:°
+
+" Highlight the search term when you search for it.
+set hlsearch
+
+" By default, it looks up man pages for the word under the cursor, which isn't
+" very useful, so we map it to something else.
+nnoremap <s-k> <CR>
+
 set clipboard=unnamed
 set encoding=utf-8
 
-let mapleader = "\<Space>"
+" Explicitly set the Leader to comma. You can use '\' (the default),
+" or anything else (some people like ';').
+let mapleader = ","
 
 " Make `jj` and `jk` throw you into normal mode
 inoremap jj <esc>
@@ -29,11 +45,14 @@ let g:gitgutter_enabled = 1
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 
-" Enable folding
-
 set background=dark
 colorscheme solarized
+
+" Enable syntax highlighting
 syntax on
+
+" Automatically change the working path to the path of the current file
+autocmd BufNewFile,BufEnter * silent! lcd %:p:h
 
 set relativenumber
 set cursorline
