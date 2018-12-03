@@ -50,11 +50,11 @@ colorscheme solarized
 
 " Enable syntax highlighting
 syntax on
+filetype plugin indent on
 
-" Automatically change the working path to the path of the current file
-autocmd BufNewFile,BufEnter * silent! lcd %:p:h
-
+set nocompatible
 set relativenumber
+set colorcolumn=80
 set cursorline
 set mouse=nicr
 set paste
@@ -68,6 +68,7 @@ let g:syntastic_auto_loc_list = 0
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_scss_checkers = ['scss_lint'] 
 
 
 autocmd BufWritePre * :%s/\s\+$//e
