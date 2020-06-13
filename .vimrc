@@ -39,6 +39,9 @@ inoremap jk <esc>
 
 map <C-n> :NERDTreeToggle<CR>
 let g:NERDTreeWinPos = "left"
+let g:NERDTreeMinimalUI = 1
+let NERDTreeShowHidden = 1
+let NERDTreeIgnore = ['\.DS_Store$', '\.git$', '\.idea$', '\.vscode$', '\.history$']
 
 let g:gitgutter_enabled = 1
 
@@ -69,7 +72,7 @@ let g:syntastic_auto_loc_list = 0
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_javascript_checkers = ['eslint']
-let g:syntastic_scss_checkers = ['scss_lint'] 
+let g:syntastic_scss_checkers = ['scss_lint']
 
 
 autocmd BufWritePre * :%s/\s\+$//e
