@@ -105,7 +105,7 @@ let g:multi_cursor_prev_key            = '<C-g>'
 let g:multi_cursor_skip_key            = '<C-x>'
 let g:multi_cursor_quit_key            = '<Esc>'
 
-au BufNewFile,BufRead *.py,*.php,*.rb,*.html,*.js,*.json,*.md
+au BufNewFile,BufRead *.py,*.php,*.rb,*.html,*.json,*.md
     \ set tabstop=4 |
     \ set softtabstop=4 |
     \ set shiftwidth=4 |
@@ -114,7 +114,7 @@ au BufNewFile,BufRead *.py,*.php,*.rb,*.html,*.js,*.json,*.md
     \ set autoindent |
     \ set fileformat=unix
 
-au BufNewFile,BufRead *.ts,*.html,*.css,*.scss
+au BufNewFile,BufRead *.ts,*.js,*.css,*.scss,*.dart
     \ set tabstop=2 |
     \ set softtabstop=2 |
     \ set shiftwidth=2 |
