@@ -50,7 +50,7 @@ let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
 
 set background=dark
-colorscheme solarized
+colorscheme onedark
 
 " Enable syntax highlighting
 syntax on
@@ -73,6 +73,7 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_javascript_checkers = ['stylelint']
 
+let g:vim_isort_map = '<C-i>'
 
 autocmd BufWritePre * :%s/\s\+$//e
 
@@ -103,6 +104,8 @@ let g:multi_cursor_next_key            = '<C-d>'
 let g:multi_cursor_prev_key            = '<C-g>'
 let g:multi_cursor_skip_key            = '<C-x>'
 let g:multi_cursor_quit_key            = '<Esc>'
+
+set completeopt-=preview
 
 au BufNewFile,BufRead *.py,*.php,*.rb,*.html,*.json,*.md
     \ set tabstop=4 |
