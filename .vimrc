@@ -27,7 +27,7 @@ set hlsearch
 nnoremap <s-k> <CR>
 
 set clipboard=unnamed
-set encoding=utf-8
+set encoding=UTF-8
 
 " Explicitly set the Leader to comma. You can use '\' (the default),
 " or anything else (some people like ';').
@@ -54,7 +54,6 @@ colorscheme solarized
 
 " Enable syntax highlighting
 syntax on
-filetype plugin indent on
 
 set nocompatible
 set relativenumber
@@ -72,7 +71,7 @@ let g:syntastic_auto_loc_list = 0
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_javascript_checkers = ['eslint']
-let g:syntastic_scss_checkers = ['scss_lint']
+let g:syntastic_javascript_checkers = ['stylelint']
 
 
 autocmd BufWritePre * :%s/\s\+$//e
