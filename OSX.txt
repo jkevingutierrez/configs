@@ -39,8 +39,11 @@ ssh-keygen
 # git
 git config --global user.email "kevingutierrezg@gmail.com"
 git config --global user.name "Kevin Gutiérrez"
-git config --global core.editor /usr/bin/vim
+git config --global core.editor vim
 git config --global push.default simple
+git config --global pull.rebase false
+git config --global merge.tool vimdiff
+git config --global log.date local
 git config --global core.autocrlf input
 git config --global core.whitespace cr-at-eol
 git config --global alias.co checkout
@@ -48,8 +51,6 @@ git config --global alias.br branch
 git config --global alias.ci commit
 git config --global alias.st status
 git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
-
-git config --global log.date local
 
 # git mergetool
 sudo xcode-select -s /Applications/Xcode.app/Contents/Developer
