@@ -4,5 +4,4 @@
 ── stylelint
 ── tslint
 ── typescript
-── webpack
-── webpack-cli
+── yarn
