@@ -37,7 +37,9 @@ let mapleader = ","
 inoremap jj <esc>
 inoremap jk <esc>
 
+" Nerdtree
 map <C-n> :NERDTreeToggle<CR>
+map <C-b> :NERDTreeFind<CR>
 let g:NERDTreeWinPos = "left"
 let g:NERDTreeMinimalUI = 1
 let NERDTreeShowHidden = 1
@@ -62,11 +64,31 @@ set relativenumber
 set colorcolumn=80
 set cursorline
 set mouse=nicr
+set guicursor=
+set noshowmatch
+set nohlsearch
+set hidden
+set noerrorbells
+set tabstop=4 softtabstop=4
+set shiftwidth=4
+set expandtab
+set smartindent
+set nowrap
+set smartcase
+set noswapfile
+set nobackup
+set undodir=~/.vim/undodir
+set undofile
+set incsearch
+set termguicolors
+set scrolloff=8
+set noshowmode
 
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
+" Syntastic
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 0
 let g:syntastic_check_on_open = 1
@@ -74,6 +96,7 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_javascript_checkers = ['stylelint']
 
+" Isort
 let g:vim_isort_map = '<C-i>'
 
 autocmd BufWritePre * :%s/\s\+$//e
@@ -96,6 +119,9 @@ noremap <Right> <NOP>
 
 let g:multi_cursor_use_default_mapping=0
 
+" Rainbow
+let g:rainbow_active = 1
+
 " Default mapping
 let g:multi_cursor_start_word_key      = '<C-d>'
 let g:multi_cursor_select_all_word_key = '<S-d>'
@@ -105,6 +131,14 @@ let g:multi_cursor_next_key            = '<C-d>'
 let g:multi_cursor_prev_key            = '<C-g>'
 let g:multi_cursor_skip_key            = '<C-x>'
 let g:multi_cursor_quit_key            = '<Esc>'
+
+" YouCompleteMe
+nnoremap <leader>gd :YcmCompleter GoTo<CR>
+nnoremap <leader>gr :YcmCompleter GoToReference<CR>
+nnoremap <leader>gl :YcmCompleter GoToDeclaration<CR>
+nnoremap <leader>gf :YcmCompleter GoToDefinition<CR>
+nnoremap <leader>gg :YcmCompleter GoToDefinitionElseDeclaration<CR>
+nnoremap <leader>rr :YcmCompleter RefactorRename<space>
 
 set completeopt-=preview
 
