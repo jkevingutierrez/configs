@@ -77,8 +77,6 @@ set nowrap
 set smartcase
 set noswapfile
 set nobackup
-set undodir=~/.vim/undodir
-set undofile
 set incsearch
 set termguicolors
 set scrolloff=8
@@ -94,7 +92,7 @@ let g:syntastic_auto_loc_list = 0
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_javascript_checkers = ['eslint']
-let g:syntastic_scss_checkers = ['stylelint']
+let g:syntastic_javascript_checkers = ['stylelint']
 
 " Isort
 let g:vim_isort_map = '<C-i>'
