@@ -78,9 +78,15 @@ set smartcase
 set noswapfile
 set nobackup
 set incsearch
-set termguicolors
 set scrolloff=8
 set noshowmode
+
+" Enable true color
+if exists('+termguicolors')
+  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+  set termguicolors
+endif
 
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
@@ -92,7 +98,7 @@ let g:syntastic_auto_loc_list = 0
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_javascript_checkers = ['eslint']
-let g:syntastic_javascript_checkers = ['stylelint']
+let g:syntastic_scss_checkers = ['stylelint']
 
 " Isort
 let g:vim_isort_map = '<C-i>'
