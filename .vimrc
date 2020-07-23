@@ -39,7 +39,7 @@ inoremap jk <esc>
 
 " Nerdtree
 map <C-n> :NERDTreeToggle<CR>
-map <C-b> :NERDTreeFind<CR>
+map <C-m> :NERDTreeFind<CR>
 let g:NERDTreeWinPos = "left"
 let g:NERDTreeMinimalUI = 1
 let NERDTreeShowHidden = 1
