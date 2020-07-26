@@ -144,20 +144,29 @@ bindkey '^w' backward-kill-word
 bindkey '^r' history-incremental-search-backward
 
 # Updates editor information when the keymap changes.
-precmd() { RPROMPT="" }
-
-# Updates editor information when the keymap changes.
-function zle-line-init zle-keymap-select {
-   VIM_PROMPT="%{$fg_bold[yellow]%} [% NORMAL]%  %{$reset_color%}"
-   RPS1="${${KEYMAP/vicmd/$VIM_PROMPT}/(main|viins)/} $EPS1"
-   zle reset-prompt
+function zle-line-init zle-keymap-select() {
+  if [ $KEYMAP = vicmd ]; then
+      echo -ne "\e]50;CursorShape=0\a"  # block cursor
+  else
+      echo -ne "\e]50;CursorShape=1\a"  # vertical bar
+  fi
+  zle reset-prompt
+  zle -R
 }
 
-zle -N zle-line-init
 zle -N zle-keymap-select
+zle -N zle-init
+
+function vi_mode_prompt_info() {
+  echo "${${KEYMAP/vicmd/[% NORMAL]%}/(main|viins)/[% INSERT]%}"
+}
+
+# define right prompt, regardless of whether the theme defined it
+RPS1='$(vi_mode_prompt_info)'
+RPS2=$RPS1
 
 # Make Vi mode transitions faster (KEYTIMEOUT is in hundredths of a second)
-export KEYTIMEOUT=1
+export KEYTIMEOUT=20
 
 # Beginning search with arrow keys
 autoload -Uz history-search-end
@@ -173,3 +182,5 @@ bindkey -M viins '^[[A' history-beginning-search-backward-end \
                  '^[OA' history-beginning-search-backward-end \
                  '^[[B' history-beginning-search-forward-end \
                  '^[OB' history-beginning-search-forward-end
+
+bindkey -M viins 'jj' vi-cmd-mode
