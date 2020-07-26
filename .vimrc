@@ -54,7 +54,7 @@ let g:gitgutter_enabled = 1
 " FZF
 nnoremap <silent> <C-p> :GFiles<CR>
 let g:fzf_layout = { 'window': { 'width': 0.8, 'height': 0.8  }  }
-let $FZF_DEFAULT_OPTS = '--reverse'
+let $FZF_DEFAULT_OPTS="--preview 'right:60%' --layout reverse --margin=1,4 --preview 'bat --color=always --style=header,grid --line-range :300 {}'"
 
 set wildignore+=*/node_modules/*,_site,*/__pycache__/,*/venv/*,*/target/*,*/.vim$,\~$,*/.log,*/.aux,*/.cls,*/.aux,*/.bbl,*/.blg,*/.fls,*/.fdb*/,*/.toc,*/.out,*/.glo,*/.log,*/.ist,*/.fdb_latexmk
 
