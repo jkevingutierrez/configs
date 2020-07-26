@@ -47,9 +47,11 @@ let NERDTreeIgnore = ['\.DS_Store$', '\.git$', '\.idea$', '\.vscode$', '\.histor
 
 let g:gitgutter_enabled = 1
 
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlP'
+" let g:ctrlp_map = '<c-p>'
+" let g:ctrlp_cmd = 'CtrlP'
+"
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
+nnoremap <silent> <C-p> :GFiles<CR>
 
 set wildignore+=*/node_modules/*,_site,*/__pycache__/,*/venv/*,*/target/*,*/.vim$,\~$,*/.log,*/.aux,*/.cls,*/.aux,*/.bbl,*/.blg,*/.fls,*/.fdb*/,*/.toc,*/.out,*/.glo,*/.log,*/.ist,*/.fdb_latexmk
 
@@ -93,12 +95,35 @@ set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
 " Syntastic
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 0
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_javascript_checkers = ['eslint']
-let g:syntastic_scss_checkers = ['stylelint']
+" let g:syntastic_always_populate_loc_list = 1
+" let g:syntastic_auto_loc_list = 0
+" let g:syntastic_check_on_open = 1
+" let g:syntastic_check_on_wq = 0
+" let g:syntastic_javascript_checkers = ['eslint']
+" let g:syntastic_scss_checkers = ['stylelint']
+
+" ALE
+let g:ale_lint_on_enter = 0
+let g:ale_fix_on_save = 1
+let g:ale_lint_on_insert_leave = 1
+let g:ale_lint_on_text_changed = 1
+let g:ale_set_highlights = 1
+let g:ale_sign_error = '●'
+let g:ale_sign_warning = '•'
+
+hi link ALEErrorSign    Error
+hi link ALEWarningSign  Warning
+
+let g:ale_fixers = {
+\   '*': ['remove_trailing_lines', 'trim_whitespace'],
+\   'javascript': ['eslint'],
+\   'scss': ['stylelint'],
+\}
+let g:ale_linters = {
+\   'javascript': ['eslint'],
+\   'typescript': ['eslint'],
+\   'scss': ['stylelint'],
+\}
 
 " Isort
 let g:vim_isort_map = '<C-i>'
@@ -136,6 +161,8 @@ let g:multi_cursor_prev_key            = '<C-g>'
 let g:multi_cursor_skip_key            = '<C-x>'
 let g:multi_cursor_quit_key            = '<Esc>'
 
+set foldlevel=99
+
 " YouCompleteMe
 nnoremap <leader>gd :YcmCompleter GoTo<CR>
 nnoremap <leader>gr :YcmCompleter GoToReference<CR>
@@ -143,8 +170,6 @@ nnoremap <leader>gl :YcmCompleter GoToDeclaration<CR>
 nnoremap <leader>gf :YcmCompleter GoToDefinition<CR>
 nnoremap <leader>gg :YcmCompleter GoToDefinitionElseDeclaration<CR>
 nnoremap <leader>rr :YcmCompleter RefactorRename<space>
-
-set foldlevel=99
 
 set completeopt-=preview
 
