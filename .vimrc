@@ -144,6 +144,8 @@ nnoremap <leader>gf :YcmCompleter GoToDefinition<CR>
 nnoremap <leader>gg :YcmCompleter GoToDefinitionElseDeclaration<CR>
 nnoremap <leader>rr :YcmCompleter RefactorRename<space>
 
+set foldlevel=99
+
 set completeopt-=preview
 
 au BufNewFile,BufRead *.py,*.php,*.rb,*.html,*.json,*.md
