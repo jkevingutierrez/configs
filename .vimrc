@@ -117,6 +117,7 @@ hi link ALEWarningSign  Warning
 let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
 \   'javascript': ['eslint'],
+\   'typescript': ['eslint'],
 \   'scss': ['stylelint'],
 \}
 let g:ale_linters = {
