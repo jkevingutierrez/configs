@@ -124,6 +124,7 @@ let g:ale_linters = {
 \   'javascript': ['eslint'],
 \   'typescript': ['eslint'],
 \   'scss': ['stylelint'],
+\   'python': ['pylint'],
 \}
 
 " Isort
