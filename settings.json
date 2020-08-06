@@ -1,33 +1,97 @@
 {
-    "files.trimTrailingWhitespace": true,
-    "editor.wrappingIndent": "indent",
-    "editor.trimAutoWhitespace": true,
-    "workbench.iconTheme": "vscode-icons",
-    "html.format.endWithNewline": true,
-    "vsicons.projectDetection.autoReload": true,
-    "sublimeTextKeymap.promptV3Features": true,
-    "editor.multiCursorModifier": "ctrlCmd",
-    "editor.snippetSuggestions": "top",
-    "editor.formatOnPaste": true,
-    "editor.wordWrap": "on",
-    "gitlens.advanced.messages": {
-        "suppressShowKeyBindingsNotice": true,
-        "suppressWelcomeNotice": true
-    },
-    "gitlens.keymap": "alternate",
-    "workbench.colorTheme": "Slime",
-    "explorer.openEditors.visible": 1,
-    "editor.minimap.enabled": false,
-    "editor.tabCompletion": true,
-    "editor.lineHeight": 24,
-    "files.encoding": "utf8",
-    "files.insertFinalNewline": true,
-    "editor.fontSize": 15,
-    "window.zoomLevel": 0,
-    "vim.insertModeKeyBindings": [{
-        "before": ["j", "j"],
-        "after": ["<Esc>"]
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.python"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "diffEditor.ignoreTrimWhitespace": false,
+  "editor.fontLigatures": true,
+  "editor.fontSize": 16,
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.lineHeight": 32,
+  "editor.lineNumbers": "relative",
+  "editor.minimap.enabled": false,
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.renameOnType": true,
+  "editor.renderWhitespace": "boundary",
+  "editor.rulers": [80],
+  "editor.scrollBeyondLastLine": false,
+  "editor.snippetSuggestions": "top",
+  "editor.suggestSelection": "first",
+  "editor.tabCompletion": "on",
+  "editor.trimAutoWhitespace": true,
+  "editor.wordWrap": "on",
+  "editor.wrappingIndent": "indent",
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact",
+    "nunjucks": "html"
+  },
+  "explorer.openEditors.visible": 1,
+  "files.encoding": "utf8",
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
+  "gitlens.advanced.messages": {
+    "suppressShowKeyBindingsNotice": true,
+    "suppressWelcomeNotice": true
+  },
+  "gitlens.keymap": "alternate",
+  "html.format.endWithNewline": true,
+  "java.semanticHighlighting.enabled": true,
+  "javascript.implicitProjectConfig.checkJs": true,
+  "liveshare.featureSet": "insiders",
+  "php-cs-fixer.executablePath": "${extensionPath}/php-cs-fixer.phar",
+  "php-cs-fixer.lastDownload": 1543450677084,
+  "python.pythonPath": "/usr/local/bin/python",
+  "sublimeTextKeymap.promptV3Features": true,
+  "terminal.integrated.shell.osx": "/bin/zsh",
+  "vim.handleKeys": {
+    "<C-a>": false,
+    "<C-f>": false
+  },
+  "vim.insertModeKeyBindings": [
+    {
+      "after": ["<Esc>"],
+      "before": ["j", "j"]
     }
-],
-"python.pythonPath": "/usr/local/bin/python",
-  }
+  ],
+  "vim.leader": ",",
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "after": ["d", "d"],
+      "before": ["<leader>", "d"]
+    },
+    {
+      "before": ["Z", "Z"],
+      "commands": [":wq"]
+    },
+    {
+      "before": ["leader", "w"],
+      "commands": ["workbench.action.files.save"]
+    }
+  ],
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "window.zoomLevel": 0,
+  "workbench.colorTheme": "One Dark Pro",
+  "workbench.iconTheme": "vscode-icons",
+  "zenMode.centerLayout": false,
+  "zenMode.fullScreen": false,
+  "zenMode.hideLineNumbers": false,
+  "zenMode.silentNotifications": false
+}
