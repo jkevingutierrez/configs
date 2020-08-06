@@ -93,5 +93,6 @@
   "zenMode.centerLayout": false,
   "zenMode.fullScreen": false,
   "zenMode.hideLineNumbers": false,
+  "zenMode.restore": true,
   "zenMode.silentNotifications": false
 }
