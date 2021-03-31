@@ -62,7 +62,7 @@ ZSH_THEME="strug"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  git
+  # git
   zsh-syntax-highlighting
 )
 
@@ -118,14 +118,16 @@ if [ -f '/Users/kgutierrez/Applications/google-cloud-sdk/path.zsh.inc' ]; then s
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/kgutierrez/Applications/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/kgutierrez/Applications/google-cloud-sdk/completion.zsh.inc'; fi
+
 export PATH="/usr/local/sbin:$PATH"
 
 export PATH="/usr/local/opt/ruby/bin:$PATH"
-export PATH="/usr/local/lib/ruby/gems/2.7.0/bin:$PATH"
-export PATH="$HOME/.gem/ruby/2.7.0/bin:$PATH"
+export PATH="/usr/local/lib/ruby/gems/3.0.0/bin:$PATH"
+export PATH="$HOME/.gem/ruby/3.0.0/bin:$PATH"
 export LDFLAGS="-L/usr/local/opt/ruby/lib"
 export CPPFLAGS="-I/usr/local/opt/ruby/include"
 export PKG_CONFIG_PATH="/usr/local/opt/ruby/lib/pkgconfig"
+export GEM_HOME="/usr/local/lib/ruby/gems/3.0.0"
 
 export PATH="$HOME/.phpenv/bin:$PATH"
 eval "$(phpenv init -)"
@@ -157,7 +159,7 @@ zle -N zle-keymap-select
 zle -N zle-init
 
 function vi_mode_prompt_info() {
-  echo "${${KEYMAP/vicmd/[% NORMAL]%}/(main|viins)/[% INSERT]%}"
+  echo "${${KEYMAP/vicmd/[% NORMAL]%}/(main|viins)/[% INSERT]%} [%*]"
 }
 
 # define right prompt, regardless of whether the theme defined it
@@ -183,3 +185,9 @@ bindkey -M viins '^[[A' history-beginning-search-backward-end \
                  '^[OB' history-beginning-search-forward-end
 
 bindkey -M viins 'jj' vi-cmd-mode
+
+export PATH="/usr/local/opt/ffmepg/bin:$PATH"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+export FZF_DEFAULT_COMMAND='rg --files --follow --no-ignore-vcs --hidden -g "!{**/node_modules/*,.git/*,**venv/*}"'
