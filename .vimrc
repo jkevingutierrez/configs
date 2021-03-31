@@ -49,10 +49,9 @@ let g:gitgutter_enabled = 1
 
 " let g:ctrlp_map = '<c-p>'
 " let g:ctrlp_cmd = 'CtrlP'
+"
 " let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
-
-" FZF
-nnoremap <silent> <C-p> :GFiles<CR>
+nnoremap <silent> <C-p> :Files<CR>
 let g:fzf_layout = { 'window': { 'width': 0.8, 'height': 0.8  }  }
 let $FZF_DEFAULT_OPTS="--preview 'right:60%' --layout reverse --margin=1,4 --preview 'bat --color=always --style=header,grid --line-range :300 {}'"
 
@@ -93,9 +92,9 @@ if exists('+termguicolors')
   set termguicolors
 endif
 
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+" set statusline+=%#warningmsg#
+" set statusline+=%{SyntasticStatuslineFlag()}
+" set statusline+=%*
 
 " Syntastic
 " let g:syntastic_always_populate_loc_list = 1
