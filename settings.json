@@ -1,100 +1,161 @@
 {
-  "[html]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[json]": {
-    "editor.defaultFormatter": "vscode.json-language-features"
-  },
-  "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[python]": {
-    "editor.defaultFormatter": "ms-python.python"
-  },
-  "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[typescriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "debug.console.fontSize": 14,
-  "diffEditor.ignoreTrimWhitespace": false,
-  "editor.fontLigatures": true,
-  "editor.fontSize": 16,
-  "editor.formatOnPaste": true,
-  "editor.lineHeight": 32,
-  "editor.lineNumbers": "relative",
-  "editor.minimap.enabled": false,
-  "editor.multiCursorModifier": "ctrlCmd",
-  "editor.renameOnType": true,
-  "editor.renderWhitespace": "boundary",
-  "editor.rulers": [80],
-  "editor.scrollBeyondLastLine": false,
-  "editor.snippetSuggestions": "top",
-  "editor.suggestSelection": "first",
-  "editor.tabCompletion": "on",
-  "editor.trimAutoWhitespace": true,
-  "editor.wordWrap": "on",
-  "editor.wrappingIndent": "indent",
-  "emmet.includeLanguages": {
-    "javascript": "javascriptreact",
-    "nunjucks": "html"
-  },
-  "explorer.openEditors.visible": 1,
-  "files.encoding": "utf8",
-  "files.insertFinalNewline": true,
-  "files.trimTrailingWhitespace": true,
-  "gitlens.advanced.messages": {
-    "suppressShowKeyBindingsNotice": true,
-    "suppressWelcomeNotice": true
-  },
-  "gitlens.keymap": "alternate",
-  "html.format.endWithNewline": true,
-  "java.semanticHighlighting.enabled": true,
-  "javascript.implicitProjectConfig.checkJs": true,
-  "liveshare.featureSet": "insiders",
-  "php-cs-fixer.executablePath": "${extensionPath}/php-cs-fixer.phar",
-  "php-cs-fixer.lastDownload": 1543450677084,
-  "python.pythonPath": "/usr/local/bin/python",
-  "sublimeTextKeymap.promptV3Features": true,
-  "terminal.integrated.fontSize": 14,
-  "terminal.integrated.shell.osx": "/bin/zsh",
-  "vim.handleKeys": {
-    "<C-a>": false,
-    "<C-f>": false
-  },
-  "vim.insertModeKeyBindings": [
-    {
-      "after": ["<Esc>"],
-      "before": ["j", "j"]
-    }
-  ],
-  "vim.leader": ",",
-  "vim.normalModeKeyBindingsNonRecursive": [
-    {
-      "after": ["d", "d"],
-      "before": ["<leader>", "d"]
-    },
-    {
-      "before": ["Z", "Z"],
-      "commands": [":wq"]
-    },
-    {
-      "before": ["leader", "w"],
-      "commands": ["workbench.action.files.save"]
-    }
-  ],
-  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-  "window.zoomLevel": 0,
-  "workbench.colorTheme": "One Dark Pro",
-  "workbench.iconTheme": "vscode-icons",
-  "zenMode.centerLayout": false,
-  "zenMode.fullScreen": false,
-  "zenMode.hideLineNumbers": false,
-  "zenMode.hideTabs": false,
-  "zenMode.restore": true,
-  "zenMode.silentNotifications": false
+	"[css]": {
+		"editor.defaultFormatter": "stylelint.vscode-stylelint"
+	},
+	"[html]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[javascript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[javascriptreact]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[json]": {
+		"editor.defaultFormatter": "vscode.json-language-features"
+	},
+	"[jsonc]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[markdown]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[python]": {
+		"editor.defaultFormatter": "eeyore.yapf",
+		"editor.formatOnType": true
+	},
+	"[scss]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[svg]": {
+		"editor.defaultFormatter": "jock.svg"
+	},
+	"[typescript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[typescriptreact]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[yaml]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"cloudcode.duetAI.inlineSuggestions.enableAuto": false,
+	"debug.console.fontSize": 16,
+	"diffEditor.hideUnchangedRegions.enabled": true,
+	"diffEditor.ignoreTrimWhitespace": false,
+	"diffEditor.useInlineViewWhenSpaceIsLimited": false,
+	"editor.bracketPairColorization.enabled": true,
+	"editor.cursorSmoothCaretAnimation": "on",
+	"editor.fontLigatures": true,
+	"editor.fontSize": 16,
+	"editor.formatOnPaste": true,
+	"editor.guides.bracketPairs": true,
+	"editor.lineHeight": 2,
+	"editor.lineNumbers": "relative",
+	"editor.linkedEditing": true,
+	"editor.minimap.enabled": false,
+	"editor.multiCursorModifier": "ctrlCmd",
+	"editor.renderWhitespace": "boundary",
+	"editor.rulers": [
+		80
+	],
+	"editor.scrollBeyondLastLine": false,
+	"editor.snippetSuggestions": "top",
+	"editor.suggestSelection": "first",
+	"editor.tabCompletion": "on",
+	"editor.trimAutoWhitespace": true,
+	"editor.wordWrap": "on",
+	"editor.wrappingIndent": "indent",
+	"emmet.includeLanguages": {
+		"javascript": "javascriptreact",
+		"typescript": "typescriptreact",
+		"nunjucks": "html",
+		"jinja": "html"
+	},
+	"explorer.openEditors.visible": 1,
+	"files.associations": {
+		"*.jinja": "jinja"
+	},
+	"files.encoding": "utf8",
+	"files.insertFinalNewline": true,
+	"files.trimTrailingWhitespace": true,
+	"git.mergeEditor": false,
+	"gitlens.keymap": "alternate",
+	"gitlens.views.commitDetails.files.layout": "tree",
+	"js/ts.implicitProjectConfig.checkJs": true,
+	"markdown.preview.fontSize": 16,
+	"notebook.cellToolbarLocation": {
+		"default": "right",
+		"jupyter-notebook": "left"
+	},
+	"outline.showKeys": false,
+	"python.defaultInterpreterPath": "/usr/local/bin/python",
+	"python.languageServer": "Pylance",
+	"redhat.telemetry.enabled": false,
+	"security.workspace.trust.untrustedFiles": "open",
+	"stylelint.validate": [
+		"css",
+		"scss"
+	],
+	"terminal.integrated.fontSize": 16,
+	"vim.digraphs": {},
+	"vim.handleKeys": {
+		"<C-a>": false,
+		"<C-f>": false
+	},
+	"vim.insertModeKeyBindings": [
+		{
+			"after": [
+				"<Esc>"
+			],
+			"before": [
+				"j",
+				"j"
+			]
+		}
+	],
+	"vim.leader": ",",
+	"vim.normalModeKeyBindingsNonRecursive": [
+		{
+			"after": [
+				"d",
+				"d"
+			],
+			"before": [
+				"<leader>",
+				"d"
+			]
+		},
+		{
+			"before": [
+				"Z",
+				"Z"
+			],
+			"commands": [
+				":wq"
+			]
+		},
+		{
+			"before": [
+				"leader",
+				"w"
+			],
+			"commands": [
+				"workbench.action.files.save"
+			]
+		}
+	],
+	"vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+	"window.zoomLevel": 1,
+	"workbench.colorTheme": "One Dark Pro",
+	"workbench.editor.empty.hint": "hidden",
+	"workbench.editorAssociations": {
+		"*.ipynb": "jupyter-notebook"
+	},
+	"workbench.iconTheme": "vscode-icons",
+	"zenMode.centerLayout": false,
+	"zenMode.fullScreen": false,
+	"zenMode.hideLineNumbers": false,
+	"zenMode.restore": true,
+	"zenMode.silentNotifications": false
 }
