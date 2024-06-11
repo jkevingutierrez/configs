@@ -73,7 +73,8 @@ source $ZSH/oh-my-zsh.sh
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
-# export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
@@ -98,7 +99,6 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 export PATH="$HOME/.jenv/bin:$PATH"
 eval "$(jenv init -)"
-export JAVA_HOME="$HOME/.jenv/versions/`jenv version-name`"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -106,6 +106,7 @@ export NVM_DIR="$HOME/.nvm"
 
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
 
 export ANDROID_HOME=$HOME/Library/Android/sdk
 export PATH=$PATH:$ANDROID_HOME/tools
@@ -113,21 +114,15 @@ export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 export ANDROID_SDK=$ANDROID_HOME
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/kgutierrez/Applications/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/kgutierrez/Applications/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/kgutierrez/Applications/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/kgutierrez/Applications/google-cloud-sdk/completion.zsh.inc'; fi
-
 export PATH="/usr/local/sbin:$PATH"
 
 export PATH="/usr/local/opt/ruby/bin:$PATH"
-export PATH="/usr/local/lib/ruby/gems/3.0.0/bin:$PATH"
-export PATH="$HOME/.gem/ruby/3.0.0/bin:$PATH"
+# export PATH="/usr/local/lib/ruby/gems/3.0.0/bin:$PATH"
+# export PATH="$HOME/.gem/ruby/3.0.0/bin:$PATH"
 export LDFLAGS="-L/usr/local/opt/ruby/lib"
 export CPPFLAGS="-I/usr/local/opt/ruby/include"
 export PKG_CONFIG_PATH="/usr/local/opt/ruby/lib/pkgconfig"
-export GEM_HOME="/usr/local/lib/ruby/gems/3.0.0"
+# export GEM_HOME="/usr/local/lib/ruby/gems/3.0.0"
 
 export PATH="$HOME/.phpenv/bin:$PATH"
 eval "$(phpenv init -)"
@@ -136,7 +131,7 @@ export PATH=~/.composer/vendor/bin:$PATH
 export PATH="/usr/local/opt/icu4c/bin:$PATH"
 export PATH="/usr/local/opt/icu4c/sbin:$PATH"
 
-export PATH="/usr/local/opt/mysql-client/bin:$PATH"
+export PATH="/opt/homebrew/opt/mysql-client/bin:$PATH"
 export PATH="/usr/local/opt/libpq/bin:$PATH"
 
 # Enable Vim mode in ZSH
@@ -186,8 +181,41 @@ bindkey -M viins '^[[A' history-beginning-search-backward-end \
 
 bindkey -M viins 'jj' vi-cmd-mode
 
-export PATH="/usr/local/opt/ffmepg/bin:$PATH"
+export PKG_CONFIG_PATH="/usr/local/opt/openssl@1.1/lib/pkgconfig"
+export LDFLAGS="-L/usr/local/opt/openssl@1.1/lib"
+export CPPFLAGS="-I/usr/local/opt/openssl@1.1/include"
+export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
+
+export GRPC_PYTHON_BUILD_SYSTEM_OPENSSL=1
+export GRPC_PYTHON_BUILD_SYSTEM_ZLIB=1
+
+# export LDFLAGS="-L/usr/local/opt/mysql-client/lib"
+# export CPPFLAGS="-I/usr/local/opt/mysql-client/include"
+# export PKG_CONFIG_PATH="/usr/local/opt/mysql-client/lib/pkgconfig"
+# export DYLD_LIBRARY_PATH="/usr/local/opt/mysql-client/lib:$PATH"
+#
+# export LDFLAGS="-L/usr/local/opt/protobuf/lib"
+# export CPPFLAGS="-I/usr/local/opt/protobuf/include"
+
+export LDFLAGS="-L/opt/homebrew/opt/mysql-client/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/mysql-client/include"
+export PKG_CONFIG_PATH="/opt/homebrew/opt/mysql-client/lib/pkgconfig"
+export DYLD_LIBRARY_PATH="/opt/homebrew/opt/mysql-client/lib:$PATH"
+
+export LDFLAGS="-L/opt/homebrew/opt/protobuf/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/protobuf/include"
+
+export MYSQLCLIENT_CFLAGS=`pkg-config mysqlclient --cflags`
+export MYSQLCLIENT_LDFLAGS=`pkg-config mysqlclient --libs`
+
+export PATH="/usr/local/opt/ffmpeg/bin:$PATH"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-export FZF_DEFAULT_COMMAND='rg --files --follow --no-ignore-vcs --hidden -g "!{**/node_modules/*,.git/*,**venv/*}"'
+export FZF_DEFAULT_COMMAND='rg --files --follow --no-ignore-vcs --hidden -g "!{**/node_modules/*,.git/*,**/venv/*}"'
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/kegutierrez/apps/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/kegutierrez/apps/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/kegutierrez/apps/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/kegutierrez/apps/google-cloud-sdk/completion.zsh.inc'; fi
