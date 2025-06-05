@@ -1,0 +1,37 @@
+{
+  "extends": "./node_modules/gts/tsconfig-google.json",
+  "compilerOptions": {
+    "baseUrl": "./",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "outDir": "./src/static/js/",
+    "declaration": false,
+    "sourceMap": true,
+    "moduleResolution": "node",
+    "paths": {
+      "nimble/*": ["./node_modules/nimble/src/*"],
+      "helpers/*": ["./src/helpers/*"]
+    },
+    "module": "AMD",
+    "types": ["youtube", "jest", "node", "animejs", "jsdom", "@figma/plugin-typings"]
+  },
+  "ts-node": {
+    "compilerOptions": {
+      "module": "commonjs",
+      "moduleResolution": "node"
+    },
+    "skipIgnore": true
+  },
+  "compileOnSave": false,
+  "allowJs": true,
+  "esModuleInterop": true,
+  "include": ["./src/**/*.ts", "./node_modules/nimble/src/**/*.ts", "./*.ts", "./cli/**/*.ts"],
+  "exclude": [
+    "./node_modules/nimble/src/**/*.test.ts",
+    "./src/static/**/*.js",
+    "./src/static/**/*.ts"
+  ]
+}
