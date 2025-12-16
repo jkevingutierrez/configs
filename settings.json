@@ -143,6 +143,10 @@
 			"commands": [
 				"workbench.action.files.save"
 			]
+		},
+		{
+	  		"before": ["g", "r"],
+		  	"commands": ["editor.action.rename"]
 		}
 	],
 	"vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
